@@ -1,0 +1,27 @@
+# Exclude development files
+/node_modules
+/src
+/*.test.ts
+/*.test.tsx
+/*.spec.ts
+/*.spec.tsx
+/*.md
+
+# Exclude build artifacts
+/dist
+/.vite
+/*.tgz
+/*.zip
+
+# Exclude IDE and editor files
+/.vscode
+/.idea
+*.suo
+*.ntvs_analysis.dat
+*.njsproj
+*.sln
+
+# Exclude environment files
+.env
+.env.local
+.env.*.local

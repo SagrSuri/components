@@ -1,0 +1,39 @@
+# Dependencies
+/node_modules
+
+# Build output
+/dist
+
+# Vite
+/.vite
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# TypeScript
+*.tsbuildinfo
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.suo
+*.ntvs_analysis.dat
+*.njsproj
+*.sln
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# npm
+package-lock.json
+yarn.lock
+
+# Other
+*.tgz
+*.zip
