@@ -1,10 +1,11 @@
 import React from 'react'
+import { Cube } from './components/Cube/index'
 
 function App() {
-  return (
-    <div>
-        App
-    </div>
+  return(
+   <div>
+    <Cube/>
+   </div>
   )
 }
 

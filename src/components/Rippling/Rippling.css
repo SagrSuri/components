@@ -8,6 +8,8 @@
 }
 
 body {
+    margin: 0; /* Ensure no default margin */
+    padding: 0; /* Ensure no default padding */
     position: relative;
     width: 100vw;
     height: 100vh;
@@ -20,7 +22,7 @@ body {
 
 .loader_center {
     z-index: 10;
-    position: absolute;
+    position: relative; /* Changed from absolute to relative */
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -36,19 +38,19 @@ body {
 
 .content {
     top: 55%;
-    left: 51%;
+    left: 50%; /* Adjusted to ensure centering */
     transform: translate(-50%, -50%);
-    position: relative;
+    position: absolute; /* Changed from relative to absolute */
 }
 
 .loader_center.clicked {
     animation: shadowFadeOut 200ms ease-out forwards,
-               shadowFadeIn 200ms 300ms ease-in forwards;
+        shadowFadeIn 200ms 300ms ease-in forwards;
 }
 
 .loader_center.clicked svg {
     animation: fillFadeOut 200ms ease-out forwards,
-               fillFadeIn 200ms 300ms ease-in forwards;
+        fillFadeIn 200ms 300ms ease-in forwards;
 }
 
 .wave {
@@ -60,7 +62,7 @@ body {
     box-shadow: 20px 20px 60px var(--darken), -20px -20px 60px var(--lighten);
     opacity: 0;
     animation: fadeIn 400ms ease-out forwards, outside_grow 5s ease-out,
-               fadeOut 3s 2s forwards;
+        fadeOut 3s 2s forwards;
 }
 
 .wave::after {

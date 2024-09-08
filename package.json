@@ -2,14 +2,19 @@
   "name": "sagarsuri",
   "version": "1.0.0",
   "description": "I am Creating React Components Which Will be reusable. You just need to install and use the components you want. You can also explore more about me at www.sagarsuri.in. My name is Sagar Suri.",
-  "main": "dist/demo1/index.cjs.js",
-  "module": "dist/demo1/index.es.js",
+  "main": "dist/Cube/index.cjs.js",
+  "module": "dist/Cube/index.es.js",
   "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "vite build",
-    "dev": "vite",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+"scripts": {
+  "build:es": "vite build --config vite.config.es.js",
+  "build:cjs": "vite build --config vite.config.cjs.js",
+  "build:umd:cube": "vite build --config vite.config.cube.umd.js",
+  "build:umd:hexagona": "vite build --config vite.config.hexagona.umd.js",
+  "build:umd:crazyarch": "vite build --config vite.config.crazyarch.umd.js",
+  "build:umd:rippling": "vite build --config vite.config.rippling.umd.js",
+  "build:umd": "npm run build:umd:cube && npm run build:umd:hexagona && npm run build:umd:crazyarch && npm run build:umd:rippling",
+  "build": "npm run build:es && npm run build:cjs && npm run build:umd"
+},
   "repository": {
     "type": "git",
     "url": "https://github.com/sagrsuri/components.git"
@@ -37,7 +42,23 @@
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^3.0.0",
-    "vite": "^4.0.0"
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.4.0",
+    "@typescript-eslint/parser": "^8.4.0",
+    "@vitejs/plugin-react": "^3.1.0",
+    "eslint": "^9.10.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.3.3",
+    "tslib": "^2.7.0",
+    "typescript": "^5.5.4",
+    "vite": "^4.5.3"
+  },
+  "exports": {
+    "./Cube": "./dist/Cube/index.es.js",
+    "./Hexagona": "./dist/Hexagona/index.es.js",
+    "./CrazyArch": "./dist/CrazyArch/index.es.js",
+    "./Rippling": "./dist/Rippling/index.es.js"
   }
 }

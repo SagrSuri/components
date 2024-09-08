@@ -1,4 +1,5 @@
 import React from 'react';
+import './CubeLoader.css';  // Import your CSS file
 
 const CubeLoader = () => {
   return (
